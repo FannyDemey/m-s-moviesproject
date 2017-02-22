@@ -1,9 +1,12 @@
 package app.controller;
 
 import app.api.Movie;
+import app.api.User;
 import app.service.MovieService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,11 +30,12 @@ public class MovieController {
         this.movieService = movieService;
     }
 
-    @RequestMapping(method = RequestMethod.PUT)
-    void rent(@RequestParam(value ="movieName") String movieName, @RequestParam(value ="userEmail") String userEmail,
-               HttpServletResponse response) {
-        log.debug("Renting {} for user {}",movieName,userEmail);
-        Movie movie = movieService.rentMovie(movieName,userEmail);
+
+    @RequestMapping(value = "/{movieName}",method = RequestMethod.PUT)
+    void rent(@PathVariable(value ="movieName") String movieName, @RequestBody User user,
+              HttpServletResponse response) {
+        log.debug("Renting {} for user {}",movieName,user.getEmail());
+        Movie movie = movieService.rentMovie(movieName,user.getEmail());
         if(movie!=null){
             response.setStatus(HttpServletResponse.SC_CREATED);
         }

@@ -41,17 +41,11 @@ public class MovieService {
 
 
     public Movie rentMovie(String movieName, String userEmail) {
-        log.info("user:" + userEmail);
         Optional<Movie> movieOptional = moviesRepository.findByName(movieName);
         Optional<User> userOptional = userRepository.findByEmail(userEmail);
-        log.info("movie:" + movieOptional.get().getName());
-        log.info("movie:" + userOptional.get().getEmail());
         if(movieOptional.isPresent() && userOptional.isPresent()){
             Movie movie = movieOptional.get();
             User user = userOptional.get();
-            log.info("movie:" + movie.getName());
-            log.info("movie:" + movie.getAvailable());
-            log.info("user:" + user.getType());
             if (movie.getAvailable()) {
                 if (user.getType().equals("registered")) {
                     movie.setExpiration_date(this.getDate(7));
@@ -61,9 +55,9 @@ public class MovieService {
                 }
                 movie.setAvailable(false);
                 movie.setRenter(user);
+                log.info("movie:" + movie.toString());
+                return moviesRepository.save(movie);
             }
-            log.info("movie:" + movie.toString());
-            return moviesRepository.save(movie);
         }
         return null;
     }
