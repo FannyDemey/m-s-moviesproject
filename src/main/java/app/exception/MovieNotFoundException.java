@@ -1,0 +1,11 @@
+package app.exception;
+
+
+/**
+ * Created by a508708 on 21/02/2017.
+ */
+public class MovieNotFoundException extends Exception {
+    public MovieNotFoundException(String name) {
+        super(); //TOTO
+    }
+}
