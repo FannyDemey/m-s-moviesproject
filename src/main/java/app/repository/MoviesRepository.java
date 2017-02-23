@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Created by a508708 on 19/02/2017.
+ * Created by Fanny Demey on 19/02/2017.
  */
 @RepositoryRestResource(collectionResourceRel = "movie", path = "movie")
 public interface MoviesRepository extends MongoRepository<Movie, String> {

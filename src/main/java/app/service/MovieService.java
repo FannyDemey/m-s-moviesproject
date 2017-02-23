@@ -2,7 +2,6 @@ package app.service;
 
 import app.api.Movie;
 import app.api.User;
-import app.exception.MovieNotFoundException;
 import app.repository.MoviesCustomRequestRepository;
 import app.repository.MoviesRepository;
 import app.repository.UserRepository;
@@ -16,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Created by a508708 on 21/02/2017.
+ * Created by Fanny Demey on 21/02/2017.
  */
 @Slf4j
 @Service

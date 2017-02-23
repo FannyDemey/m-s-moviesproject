@@ -34,7 +34,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.*;
 /**
- * Created by a508708 on 22/02/2017.
+ * Created by Fanny Demey on 22/02/2017.
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)

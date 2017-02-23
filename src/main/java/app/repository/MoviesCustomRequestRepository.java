@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by a508708 on 22/02/2017.
+ * Created by Fanny Demey on 22/02/2017.
  */
 @Repository
 public class MoviesCustomRequestRepository {

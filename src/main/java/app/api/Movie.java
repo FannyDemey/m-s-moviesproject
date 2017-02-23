@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by a508708 on 28/01/2017.
+ * Created by Fanny Demey on 28/01/2017.
  */
 @Builder
 @Getter

@@ -8,7 +8,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
 /**
- * Created by a508708 on 19/02/2017.
+ * Created by Fanny Demey on 19/02/2017.
  */
 @Builder
 @Getter
