@@ -22,8 +22,7 @@ mvn spring-boot:run
 
 ### Test coverage
 
-The class MovieController cover nominal test case using JUnit
-you don't need to run a mongo db server locally to run it.
+The class MovieController cover nominal test case using JUnit. You don't need to run a mongo db server locally to run it.
 
 ### Play with it
 
