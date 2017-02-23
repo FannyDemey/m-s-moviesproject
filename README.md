@@ -4,12 +4,12 @@
 
 ### Start the application : 
 
-1. Run a mongodb locally
+1. Start a mongodb locally
 
 you must start a mongodb on your computer to run this app. it must start on localhost and on port 27017. If you want to change thos parameters, please modify application.properties file in consequence located in resources folder.
 
 
-2. Run
+2. Run the application
 
 * if you are using IntelliJ :
 just press Alt + Shift + F10
