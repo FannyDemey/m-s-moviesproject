@@ -8,7 +8,6 @@
 
 you must start a mongodb on your computer to run this app. it must start on localhost and on port 27017. If you want to change thos parameters, please modify application.properties file in consequence (located in resources folder).
 
-
 #### Run the application
 
 * if you are using IntelliJ :
